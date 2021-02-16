@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import h5py
 import cv2
+import os
 
 def time_convert(seconds):
     m, s = divmod(seconds, 60)
@@ -68,7 +69,7 @@ def show_20_images(df, img_array, label_array, offset=0):
         plt.title("Class: " + _class,fontsize = 50)
         
 
-def plot_model_history( history, saving_name="model_loss_accuracy"):
+def plot_model_history( history, folder="plots/", saving_name="model_loss_accuracy"):
     plt.style.use("ggplot")
     plt.figure(figsize=(16, 6))
 
@@ -92,10 +93,13 @@ def plot_model_history( history, saving_name="model_loss_accuracy"):
     plt.legend(loc="upper right")
 
     # save plot to disk
-    plt.savefig(saving_name)
+    os.makedirs(os.path.dirname(folder), exist_ok=True)
+    plt.savefig(folder+saving_name)
     plt.show()
 
-def plot_learning_rate( history, saving_name="model_learn_rate"):
+def plot_learning_rate( history, folder="plots/", saving_name="model_learn_rate"):
+    # history only contain lr when lrScheduler used 
+    # => need to assert('lr' in history.history.keys()) # test syntax later
     # the learning rate schedule
     plt.style.use("ggplot")
     plt.figure(figsize=(8, 6))
@@ -103,6 +107,8 @@ def plot_learning_rate( history, saving_name="model_learn_rate"):
     plt.title("Learning Rate")
     plt.xlabel("Epoch #")
     plt.ylabel("Learning Rate")
-    plt.savefig(saving_name)
+    # save plot to disk
+    os.makedirs(os.path.dirname(folder), exist_ok=True)
+    plt.savefig(folder+saving_name)
     plt.show()
 
