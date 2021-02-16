@@ -84,6 +84,7 @@ def plot_model_history( history, folder="plots/", saving_name="model_loss_accura
 
     # plot for accuracy
     ax = plt.subplot(1, 2, 2)
+    ax.set_ylim([0,1]) # fix y-range for eazy comparison 
     plt.plot(history.history["accuracy"], label="train_acc")
     plt.plot(history.history["val_accuracy"], label="val_acc")
 
