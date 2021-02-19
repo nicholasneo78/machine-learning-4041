@@ -75,22 +75,27 @@ def plot_model_history( history, folder="plots/", saving_name="model_loss_accura
 
     # plot for loss
     ax = plt.subplot(1, 2, 1)
+    # ensure ploting never plot beyond 10
+    #y_max = (max(history.history["loss"]), max(history.history["val_loss"]))
+    #y_max = min(10.0, max(y_max))
+    #ax.set_ylim(ymax=y_max)
     plt.plot( history.history["loss"], label="train_loss")
     plt.plot( history.history["val_loss"], label="val_loss")
-    plt.title("Loss for Training/Validation")
+    plt.title("Model Loss")
     plt.xlabel("Epoch #")
     plt.ylabel("Loss")
     plt.legend(loc="upper right")
 
     # plot for accuracy
     ax = plt.subplot(1, 2, 2)
+    ax.set_ylim([0,1]) # fix y-range for eazy comparison 
     plt.plot(history.history["accuracy"], label="train_acc")
     plt.plot(history.history["val_accuracy"], label="val_acc")
 
-    plt.title("Accuracy for Training/Validation")
+    plt.title("Model Accuracy")
     plt.xlabel("Epoch #")
     plt.ylabel("Accuracy")
-    plt.legend(loc="upper right")
+    plt.legend(loc="upper left")
 
     # save plot to disk
     os.makedirs(os.path.dirname(folder), exist_ok=True)
@@ -99,7 +104,8 @@ def plot_model_history( history, folder="plots/", saving_name="model_loss_accura
 
 def plot_learning_rate( history, folder="plots/", saving_name="model_learn_rate"):
     # history only contain lr when lrScheduler used 
-    # => need to assert('lr' in history.history.keys()) # test syntax later
+    #assert('lr' in history.history.keys()), "model history does not contain lr, ensure lr related callback is used"
+    
     # the learning rate schedule
     plt.style.use("ggplot")
     plt.figure(figsize=(8, 6))
