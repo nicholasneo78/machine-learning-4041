@@ -20,7 +20,7 @@ def generate_h5_data(data,labels,filename):
     try:
         filepath= f'./{filename}.h5'
         h5data = h5py.File(filepath, 'w')
-        h5data.create_dataset('image',data= data)
+        h5data.create_dataset('image',data= data, compression="gzip", compression_opts=9)
         h5data['label'] = labels
 
     finally:
