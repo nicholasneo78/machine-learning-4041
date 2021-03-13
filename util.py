@@ -3,6 +3,7 @@ import numpy as np
 import h5py
 import cv2
 import os
+import math
 
 def time_convert(seconds):
     m, s = divmod(seconds, 60)
@@ -13,60 +14,46 @@ def time_convert(seconds):
         return "%dm %ds" % (m, s)
     else:
         return "%ds" % (s) 
+    
+def convert_size(size_bytes):
+    if size_bytes == 0:
+        return "0B"
+    size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+    i = int(math.floor(math.log(size_bytes, 1024)))
+    p = math.pow(1024, i)
+    s = round(size_bytes / p, 2)
+    return "%s %s" % (s, size_name[i])
 
-def generate_h5_data(data,labels,filename):
-    assert(type(filename) is str)
-    assert(len(data) == len(labels)) 
+def nparray_info(header, nparr):
+    print(header)
+    print("-  shape\t", nparr.shape)
+    print("-  dtype\t", nparr.dtype)
+    print("- nbytes\t", f"{nparr.nbytes} ({convert_size(nparr.nbytes)})")
+    
+
+def generate_h5_data(data, labels, saving_path="./Datasets/data.h5"):
+    assert(type(saving_path) is str)
+    assert(len(data) == len(labels))
+    
+    os.makedirs(os.path.dirname(saving_path), exist_ok=True)
     try:
-        filepath= f'./{filename}.h5'
-        h5data = h5py.File(filepath, 'w')
-        h5data.create_dataset('image',data= data, compression="gzip", compression_opts=9)
-        h5data['label'] = labels
+        with h5py.File(saving_path, 'w') as h5:
+            #h5.create_dataset('image', data= data, compression="gzip", compression_opts=9)
+            h5.create_dataset('image', data= data)
+            h5.create_dataset('label', data= labels)
+    except Exception as e:
+        print(e)
+    
 
-    finally:
-        h5data.close()
-
-#NO NEED FOR THIS EXERCISE
-def load_h5_data(h5filepath):
-    h5file = h5py.File(h5filepath, "r")
+def load_h5_data(saving_path="./Datasets/data.h5"):
     try:
-        x_fieldname,y_fieldname, = h5file.keys()   #this order is Gfriend files
-        print("The keys are: ", h5file.keys())
-        data = np.array(h5file['image'][:]) # your test set features
-        labels = np.array(h5file['label'][:]) # your test set labels
-        print("The shape of x_field",data.shape)
-        print("The shape of y_field",labels.shape)
-    finally:
-        h5file.close()
+        with h5py.File(saving_path, "r") as h5:
+            #print("h5.keys", h5.keys())
+            data = np.array(h5['image'][:])
+            labels = np.array(h5['label'][:])
+    except Exception as e:
+        print(e)
     return data, labels
-
-
-
-def show_20_images(df, img_array, label_array, offset=0):
-    assert(len(img_array)==len(label_array))
-    
-    datalen = len(img_array)
-    numOfIter = min(datalen,20)
-    
-    if numOfIter < 20:
-        offset = 0  #if numOfIter < 20, it means it equals datalen, which is less than 20 fed in. So no need offset
-        
-    numOfRow = numOfIter//4 + (numOfIter%4 != 0)   #a ceiling function
-    
-    plt.rcParams['figure.figsize'] = (60.0, 100.0) 
-    print(img_array.shape)
-    num_px = img_array.shape[1] #shape is (m, num_px,num_px,3)
-    for i in range(numOfIter):
-        plt.subplot(5,4,i+1)  #plot 5 by 4 grid
-        #plt.imshow(img_array[i+offset])
-        img_preview = img_array[i+offset].reshape(num_px,num_px,3)
-        img_preview = np.float32(img_preview)
-        img_preview = cv2.cvtColor(img_preview, cv2.COLOR_BGR2RGB)
-        plt.imshow(img_preview, interpolation='nearest')  #take only the num_px
-        plt.axis('off')
-        #print(f'IMG {i+1} is labelled {label_array[i+offset]}')
-        _class = df['breed'][int(label_array[i+offset])]
-        plt.title("Class: " + _class,fontsize = 50)
         
 
 def plot_model_history( history, folder="plots/", saving_name="model_loss_accuracy"):
