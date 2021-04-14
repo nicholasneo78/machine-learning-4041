@@ -30,6 +30,9 @@ def nparray_info(header, nparr):
     print("-  dtype\t", nparr.dtype)
     print("- nbytes\t", f"{nparr.nbytes} ({convert_size(nparr.nbytes)})")
     
+def avg(lst):
+    return sum(lst) / len(lst)
+    
 
 def generate_h5_data(data, labels, saving_path="./Datasets/data.h5"):
     assert(type(saving_path) is str)
@@ -55,26 +58,28 @@ def load_h5_data(saving_path="./Datasets/data.h5"):
         print(e)
     return data, labels
 
-def generate_features_data(feats_dict, saving_path="./Datasets/feaatures.h5"):
+def generate_features_data(feats_dict, saving_path="./Datasets/feaatures.h5", verbose=False):
     assert(type(saving_path) is str)
     os.makedirs(os.path.dirname(saving_path), exist_ok=True)
     try:
         with h5py.File(saving_path, 'w') as h5:
             for model_name in feats_dict:
-                print(f"saving features for {model_name}...")
+                if (verbose):
+                    print(f"saving features for {model_name}...")
                 h5.create_dataset(model_name, data= feats_dict[model_name])
         print("features saved")
     except Exception as e:
         print(e)
         
-def load_features_data(saving_path="./Datasets/feaatures.h5"):
+def load_features_data(saving_path="./Datasets/feaatures.h5", verbose=False):
     feats_dict = {}
     try:
         feats_dict = {}
         with h5py.File(saving_path, "r") as h5:
             #print("h5.keys", h5.keys())
             for model_name in h5:
-                print(f"loading features for {model_name}...")
+                if (verbose):
+                    print(f"loading features for {model_name}...")
                 feats_dict[model_name] = h5[model_name][:]
         print("features loaded")
     except Exception as e:
