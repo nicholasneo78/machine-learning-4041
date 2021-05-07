@@ -1,48 +1,48 @@
 README PREPARED BY NICHOLAS NEO 2021-04-18
 
 The codes are executed in both platforms
-1. Jupyter Notebook
-2. Google Colaboratory
+1. Jupyter Notebook  
+2. Google Colaboratory  
 
-The notebooks are placed in one of these two folders.
+The notebooks are placed in one of these two folders.  
 
-If the notebook is in jupyter_notebook => code executed using Jupyter Notebook
-If the notebook is in google_colaboratory => code executed using Google Colaboratory
+If the notebook is in jupyter_notebook => code executed using Jupyter Notebook  
+If the notebook is in google_colaboratory => code executed using Google Colaboratory  
 
-./jupyter_notebook/4041-dog-breed-classification/ &
-./google_colaboratory/4041-dog-breed-classification/
-are directories that the source codes are placed
+./jupyter_notebook/4041-dog-breed-classification/ &  
+./google_colaboratory/4041-dog-breed-classification/  
+are directories that the source codes are placed  
 
-NOTEBOOK DEPENDENCIES (PYTHON LIBRARIES USED):
+NOTEBOOK DEPENDENCIES (PYTHON LIBRARIES USED):  
 
-PRE-PROCESSING (JUPYTER NOTEBOOK):
-	- numpy
-	- pandas
-	- glob
-	- h5py
-	- os
-	- math
-	- time
-	- matplotlib
-	- tensorflow
-	- tqdm
+PRE-PROCESSING (JUPYTER NOTEBOOK):  
+	- numpy   
+	- pandas  
+	- glob  
+	- h5py  
+	- os  
+	- math  
+	- time  
+	- matplotlib  
+	- tensorflow  
+	- tqdm  
 
-TRAINING (IN GOOGLE COLABORATORY):
-	- gc
-	- os
-	- copy
-	- tqdm
-	- numpy
-	- pandas
-	- random
-	- time
-	- shutil
-	- csv
-	- tensorflow
-	- math
-	- matplotlib
-	- sklearn
-	- seaborn
+TRAINING (IN GOOGLE COLABORATORY):  
+	- gc  
+	- os  
+	- copy  
+	- tqdm  
+	- numpy  
+	- pandas  
+	- random  
+	- time  
+	- shutil  
+	- csv  
+	- tensorflow   
+	- math  
+	- matplotlib  
+	- sklearn  
+	- seaborn  
 
 ./jupyter_notebook/4041-dog-breed-classification/
 	Datasets/data.txt
