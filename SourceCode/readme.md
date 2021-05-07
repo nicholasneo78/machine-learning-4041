@@ -66,21 +66,21 @@ TRAINING (IN GOOGLE COLABORATORY):
 		
 	data-preprocess-imgs-299-uint8.ipynb  
 		- generate .npz compressed file containing all the train images  
-		- scaled image size of 299x299   
-		- dtype of each pixel is of 8bits integer
+		- scaled image size of 299x299     
+		- dtype of each pixel is of 8bits integer  
 		
 	get-test-filename.ipynb
-		- a notebook to generate the filenames of the test set without extension '.jpg' and save it in a .csv file
-		- .csv used in the model evaluation part in the training-feature-extraction-299.ipynb notebook
+		- a notebook to generate the filenames of the test set without extension '.jpg' and save it in a .csv file  
+		- .csv used in the model evaluation part in the training-feature-extraction-299.ipynb notebook  
 		
-./google_colaboratory/4041-dog-breed-classification/
-	Datasets/data.txt
-		- A list of data filenames that were used in this project
-		- A link to direct to the actual files in Google Drive
+./google_colaboratory/4041-dog-breed-classification/    
+	Datasets/data.txt    
+		- A list of data filenames that were used in this project    
+		- A link to direct to the actual files in Google Drive    
 
-	models/models.txt
-		- A list of model filenames that were used in this project
-		- A link to direct to the actual files in Google Drive		
+	models/models.txt  
+		- A list of model filenames that were used in this project  
+		- A link to direct to the actual files in Google Drive		  
 
 	training-feature-extraction-299.ipynb
 		- notebook to train the ensemble model used in Phase 3 of the report
