@@ -1,0 +1,5 @@
+### PRESENTATION VIDEO LINK ###
+
+Title: Group 23 - Dog Breed Identification
+Description: CE/CZ4041 Machine Learning Video Presentation
+Link: https://youtu.be/Yy3Qe17LaHw
