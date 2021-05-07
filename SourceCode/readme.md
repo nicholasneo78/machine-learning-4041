@@ -44,29 +44,29 @@ TRAINING (IN GOOGLE COLABORATORY):
 	- sklearn  
 	- seaborn  
 
-./jupyter_notebook/4041-dog-breed-classification/
-	Datasets/data.txt
-		- A list of data filenames that were used in this project
-		- A link to direct to the actual files in Google Drive
+./jupyter_notebook/4041-dog-breed-classification/  
+	Datasets/data.txt  
+		- A list of data filenames that were used in this project  
+		- A link to direct to the actual files in Google Drive  
 		
-	data-preprocess-imgs-128-float64.ipynb
-		- generate .npz compressed file containing all the train images
-		- scaled image size of 128x128
-		- dtype of each pixel is of 64bits float
+	data-preprocess-imgs-128-float64.ipynb   
+		- generate .npz compressed file containing all the train images   
+		- scaled image size of 128x128   
+		- dtype of each pixel is of 64bits float   
 
 	data-preprocess-imgs-192-float16.ipynb
-		- generate .npz compressed file containing all the train images
-		- scaled image size of 192x192
-		- dtype of each pixel is of 16bits float
+		- generate .npz compressed file containing all the train images  
+		- scaled image size of 192x192   
+		- dtype of each pixel is of 16bits float  
 		
-	data-preprocess-imgs-224-uint8.ipynb
-		- generate .npz compressed file containing all the train images
-		- scaled image size of 224x224
-		- dtype of each pixel is of 8bits integer
+	data-preprocess-imgs-224-uint8.ipynb  
+		- generate .npz compressed file containing all the train images  
+		- scaled image size of 224x224  
+		- dtype of each pixel is of 8bits integer  
 		
-	data-preprocess-imgs-299-uint8.ipynb
-		- generate .npz compressed file containing all the train images
-		- scaled image size of 299x299
+	data-preprocess-imgs-299-uint8.ipynb  
+		- generate .npz compressed file containing all the train images  
+		- scaled image size of 299x299   
 		- dtype of each pixel is of 8bits integer
 		
 	get-test-filename.ipynb
