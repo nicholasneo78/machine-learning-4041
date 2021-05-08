@@ -5,6 +5,7 @@
 The Kaggle Project Link: [Kaggle Dog Breed Identification](https://www.kaggle.com/c/dog-breed-identification)  
   
 Kaggle Dog Breed Identification Webpage:  
+  
 ![kaggle dog breed front page](./images/kaggle_intro.png)  
   
 ### Project Overview
@@ -15,11 +16,12 @@ Kaggle Dog Breed Identification Webpage:
 - Phase 4: Model Evaluation  
 
 ### Presentation Video
-[CE/CZ4041 Machine Learning Video Presentation](https://youtu.be/Yy3Qe17LaHw)   
+Presentation Video Link: [CE/CZ4041 Machine Learning Video Presentation](https://youtu.be/Yy3Qe17LaHw)  
+   
 ![dog breed youtube video](./images/youtube.png)   
    
 ### Introduction
-**Problem Statemnt**  
+**Problem Statement**  
 There are about 7000 stray dogs in Singapore. Stray dogs in general are a threat as they may bite humans or spread diseases such as rabies. 
 The main cause of stray dogs' problem is likely to be the dog owners abandoning their dog due to unfamiliarity with the dog’s characteristics. 
 To prevent such issues, we aimed to devise a dog breed identification app to guide users about a particular dog’s characteristics for the soon-to-be dog owners. 
@@ -39,7 +41,8 @@ As such, the objective for this project is to build a classifier to identify the
 **Aim of the Project**  
 The aim of this project is to determine the dog breeds from the dog images with at least 90% accuracy on the validation set of the data.  
   
-**Methodology**  
+**Methodology**   
+  
 ![methodology](./images/1.png)   
   
 ### Phase 1: Finding Suitable Models  
@@ -48,6 +51,7 @@ The aim of this project is to determine the dog breeds from the dog images with 
 - Model Evaluation  
   
 **Model Evaluation Result**  
+  
 ![model evaluation result](./images/2.png)  
 
 ### Phase 2: Improve Model performance  
@@ -66,27 +70,35 @@ The aim of this project is to determine the dog breeds from the dog images with 
 - Results after Tuning  
 
 **Different Combinations**  
+  
 ![different cobinations](./images/3.png)   
   
 **Results**  
+  
 ![combination results](./images/4.png) 
     
 **Tuning Hyperparameters**    
+  
 ![tune hyperparameters](./images/5.png) 
     
-**Results after Tuning**   
+**Results after Tuning**  
+    
 ![results after tuning](./images/6.png)  
    
 ### Phase 4: Model Evaluation  
-We evaluate the best three tuned models on the test set to get the multi-class log loss score   
-![model evaluation](./images/7.png)   
+**We evaluate the best three tuned models on the test set to get the multi-class log loss score.**   
   
+![model evaluation](./images/7.png)   
+   
 ### Kaggle Result
 **Batch size 32 + dropout rate 0.9 + learning rate 0.0001**    
+  
 ![model evaluation](./images/8.png)   
 **Batch size 128 + dropout rate 0.8 + learning rate 0.0001**    
-![model evaluation](./images/9.png)  
-**Batch size 128 + dropout rate 0.9 + learning rate 0.0001**    
-![model evaluation](./images/10.png)  
   
-**A detailed report can be found in Report.pdf in the same repository**  
+![model evaluation](./images/9.png)  
+**Batch size 128 + dropout rate 0.9 + learning rate 0.0001**   
+   
+![model evaluation](./images/10.png)  
+   
+**A detailed report can be found in Report.pdf in the same repository**   
