@@ -1,21 +1,20 @@
 ## README PREPARED BY NICHOLAS NEO 2021-04-18
 
-The codes are executed in both platforms
+**The codes are executed in both platforms**
 1. Jupyter Notebook  
 2. Google Colaboratory  
 
-The notebooks are placed in one of these two folders.  
+**The notebooks are placed in one of these two folders.**  
 
-If the notebook is in jupyter_notebook => code executed using Jupyter Notebook  
-If the notebook is in google_colaboratory => code executed using Google Colaboratory  
+- If the notebook is in jupyter_notebook => code executed using Jupyter Notebook  
+- If the notebook is in google_colaboratory => code executed using Google Colaboratory  
 
-./jupyter_notebook/4041-dog-breed-classification/ &  
-./google_colaboratory/4041-dog-breed-classification/  
+./jupyter_notebook/4041-dog-breed-classification/ &  ./google_colaboratory/4041-dog-breed-classification/   
 are directories that the source codes are placed  
 
-NOTEBOOK DEPENDENCIES (PYTHON LIBRARIES USED):  
+**NOTEBOOK DEPENDENCIES (PYTHON LIBRARIES USED):**  
 
-PRE-PROCESSING (JUPYTER NOTEBOOK):  
+**PRE-PROCESSING (JUPYTER NOTEBOOK):**  
 	- numpy   
 	- pandas  
 	- glob  
@@ -27,7 +26,7 @@ PRE-PROCESSING (JUPYTER NOTEBOOK):
 	- tensorflow  
 	- tqdm  
 
-TRAINING (IN GOOGLE COLABORATORY):  
+**TRAINING (IN GOOGLE COLABORATORY):**  
 	- gc  
 	- os  
 	- copy  
@@ -44,7 +43,7 @@ TRAINING (IN GOOGLE COLABORATORY):
 	- sklearn  
 	- seaborn  
 
-./jupyter_notebook/4041-dog-breed-classification/   
+**./jupyter_notebook/4041-dog-breed-classification/**   
 
 
 	Datasets/data.txt   
@@ -76,7 +75,7 @@ TRAINING (IN GOOGLE COLABORATORY):
 		- .csv used in the model evaluation part in the training-feature-extraction-299.ipynb notebook  
 		
 		
-./google_colaboratory/4041-dog-breed-classification/  
+**./google_colaboratory/4041-dog-breed-classification/**  
 
   
 	Datasets/data.txt    
