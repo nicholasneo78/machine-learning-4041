@@ -1,6 +1,6 @@
 # CE/CZ4041 - Machine Learning Project
 *A kaggle project done for the module CE/CZ4041 Machine Learning in Nanyang Technological University AY2020-21 Semester 2*    
-*A detailed report can be found in Report.pdf in the same repository*   
+*A detailed report can be found in [Report.pdf](https://github.com/nicholasneo78/machine-learning-4041/blob/main/Report.pdf) in the same repository*   
   
 ### Kaggle: Dog Breed Identification
 The Kaggle Project Link: [Kaggle Dog Breed Identification](https://www.kaggle.com/c/dog-breed-identification)  
