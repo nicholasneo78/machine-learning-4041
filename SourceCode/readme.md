@@ -44,8 +44,10 @@ TRAINING (IN GOOGLE COLABORATORY):
 	- sklearn  
 	- seaborn  
 
-./jupyter_notebook/4041-dog-breed-classification/  
-	Datasets/data.txt  
+./jupyter_notebook/4041-dog-breed-classification/   
+
+
+	Datasets/data.txt   
 		- A list of data filenames that were used in this project  
 		- A link to direct to the actual files in Google Drive  
 		
@@ -54,7 +56,7 @@ TRAINING (IN GOOGLE COLABORATORY):
 		- scaled image size of 128x128   
 		- dtype of each pixel is of 64bits float   
 
-	data-preprocess-imgs-192-float16.ipynb
+	data-preprocess-imgs-192-float16.ipynb  
 		- generate .npz compressed file containing all the train images  
 		- scaled image size of 192x192   
 		- dtype of each pixel is of 16bits float  
@@ -73,7 +75,9 @@ TRAINING (IN GOOGLE COLABORATORY):
 		- a notebook to generate the filenames of the test set without extension '.jpg' and save it in a .csv file  
 		- .csv used in the model evaluation part in the training-feature-extraction-299.ipynb notebook  
 		
-./google_colaboratory/4041-dog-breed-classification/    
+./google_colaboratory/4041-dog-breed-classification/  
+
+  
 	Datasets/data.txt    
 		- A list of data filenames that were used in this project    
 		- A link to direct to the actual files in Google Drive    
