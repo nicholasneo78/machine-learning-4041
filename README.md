@@ -1,6 +1,7 @@
 # CE/CZ4041 - Machine Learning Project
 *A kaggle project done for the module CE/CZ4041 Machine Learning in Nanyang Technological University AY2020-21 Semester 2*    
-
+*A detailed report can be found in Report.pdf in the same repository*   
+  
 ### Kaggle: Dog Breed Identification
 The Kaggle Project Link: [Kaggle Dog Breed Identification](https://www.kaggle.com/c/dog-breed-identification)  
   
@@ -94,11 +95,12 @@ The aim of this project is to determine the dog breeds from the dog images with 
 **Batch size 32 + dropout rate 0.9 + learning rate 0.0001**    
   
 ![model evaluation](./images/8.png)   
+  
 **Batch size 128 + dropout rate 0.8 + learning rate 0.0001**    
   
-![model evaluation](./images/9.png)  
+![model evaluation](./images/9.png) 
+   
 **Batch size 128 + dropout rate 0.9 + learning rate 0.0001**   
    
 ![model evaluation](./images/10.png)  
-   
-*A detailed report can be found in Report.pdf in the same repository*   
+    
