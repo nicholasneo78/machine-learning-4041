@@ -44,6 +44,7 @@ TRAINING (IN GOOGLE COLABORATORY):
 	- sklearn  
 	- seaborn  
 
+
 ./jupyter_notebook/4041-dog-breed-classification/   
 
 
@@ -74,6 +75,8 @@ TRAINING (IN GOOGLE COLABORATORY):
 	get-test-filename.ipynb
 		- a notebook to generate the filenames of the test set without extension '.jpg' and save it in a .csv file  
 		- .csv used in the model evaluation part in the training-feature-extraction-299.ipynb notebook  
+		
+		
 		
 ./google_colaboratory/4041-dog-breed-classification/  
 
