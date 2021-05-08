@@ -1,6 +1,6 @@
-# files that should be included BEFORE running code or produced AFTER running code in this directory
+### files that should be included BEFORE running code or produced AFTER running code in this directory
 
-*The data files stated below can be found in: https://drive.google.com/drive/folders/1SZ7L1wG3mqcvqTOadQ_OHoQNOnSIJ0sA?usp=sharing *  
+The data files stated below can be found in: https://drive.google.com/drive/folders/1SZ7L1wG3mqcvqTOadQ_OHoQNOnSIJ0sA?usp=sharing   
   
 **THERE WILL BE A .README.txt FILE IN THAT FOLDER TOO, PLEASE REFER TO IT**  
 
