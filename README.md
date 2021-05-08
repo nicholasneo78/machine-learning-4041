@@ -101,4 +101,4 @@ The aim of this project is to determine the dog breeds from the dog images with 
    
 ![model evaluation](./images/10.png)  
    
-**A detailed report can be found in Report.pdf in the same repository**   
+*A detailed report can be found in Report.pdf in the same repository*   
